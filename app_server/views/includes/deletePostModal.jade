@@ -1,0 +1,15 @@
+div(id='#{post._id}Modal').limiter.modal
+  button(style='top:0px;right:0px;position:absolute;' id='#{post._id}Close') ×
+  .container-login100
+    .wrap-login100
+      .login100-form-title(style='background-image: url(images/bg-01.jpg);')
+        span.login100-form-title-1
+          | Are you sure?
+      .login100-form.validate-form
+        .container-login100-form-btn
+          a(href="api/blog/posts/#{post._id}/delete") 
+            button#deletePostBtn(type='submit', action='/blog',  name='submit').login100-form-btn Delete Post
+
+          button( style='margin-left:2px;' id='#{post._id}Cancel').login100-form-btn Cancel
+
+ 

@@ -1,0 +1,30 @@
+script.
+  function createOnClick(postId) {  
+    var postId = "#{post._id}"
+    // Get the modal
+    var deletePostModal = document.getElementById(postId + 'Modal');
+    // Get the button that opens the modal
+    var deletePostBtn = document.getElementById(postId);
+
+    // Get the <button> element 'Cancel' that closes the modal
+    var cancelDeletePost = document.getElementById(postId + 'Cancel');
+
+    // Get the <button> element 'X' that closes the modal
+    var closeDeletePost = document.getElementById(postId + 'Close');
+
+    // When the user clicks the button, open the modal
+    deletePostBtn.onclick = function() {
+          deletePostModal.style.display = "block";
+    };
+
+    // When the user clicks on <span> (x), close the modal
+    cancelDeletePost.onclick = function() {
+         deletePostModal.style.display = "none";
+    };
+
+    // When the user clicks on <span> (x), close the modal
+    closeDeletePost.onclick = function() {
+         deletePostModal.style.display = "none";
+    };  
+  }
+  createOnClick();

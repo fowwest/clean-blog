@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  
+    
+
+        span
+          | Sign In
+        form(action='/login', method='post', role='form')
+          span Username
+
+          input(type='text', name='logemail', placeholder='Enter username')
+          
+          span Password
+
+          input(type='password', name='logpassword', placeholder='Enter password')
+          
+          input(type='submit', value='Submit')

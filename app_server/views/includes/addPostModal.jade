@@ -1,0 +1,23 @@
+.limiter#addPostModal.modal
+  button.closeAddPost(style='top:0px;right:0px;position:absolute;') ×
+  .container-login100
+    .wrap-login100
+      .login100-form-title(style='background-image: url(images/bg-01.jpg);')
+        span.login100-form-title-1
+          | Add Post
+      form(action='/add_post', method='POST', role='form', enctype='multipart/form-data').login100-form.validate-form
+        .wrap-input100.validate-input.m-b-26(data-validate='Username is required')
+          span.label-input100 Post Title
+          input.input100(type='text', name='post_title', value='title here', required='true')
+          span.focus-input100
+        .wrap-input100.validate-input.m-b-18(dat623470000000000002a145½- VCBNNvalidate='Password is required')
+          span.label-input100 Content
+          textarea(type='text', name='post_content' rows='8' cols='50') 
+          span.focus-input100
+          | Image:
+          br
+          br
+          input(type='file', name='postimage', required='true')
+        .container-login100-form-btn
+          input(type='submit', action='/blog',  name='submit', value='Add Post').login100-form-btn
+

@@ -1,0 +1,26 @@
+.limiter
+  .container-login100
+    .wrap-login100
+      .login100-form-title(style='background-image: url(images/bg-01.jpg);')
+        span.login100-form-title-1
+          | Sign In
+      form(action='/login', method='post', role='form').login100-form.validate-form
+        .wrap-input100.validate-input.m-b-26(data-validate='Username is required')
+          span.label-input100 Username
+          input.input100(type='text', name='logemail', placeholder='Enter username')
+          span.focus-input100
+        .wrap-input100.validate-input.m-b-18(data-validate='Password is required')
+          span.label-input100 Password
+          input.input100(type='password', name='logpassword', placeholder='Enter password')
+          span.focus-input100
+        .flex-sb-m.w-full.p-b-30
+          .contact100-form-checkbox
+            input#ckb1.input-checkbox100(type='checkbox', name='remember-me')
+            label.label-checkbox100(for='ckb1')
+              | Remember me
+          div
+            a.txt1(href='#')
+              | Forgot Password?
+        .container-login100-form-btn
+          input(type='submit', value='submit').login100-form-btn
+            | Login
